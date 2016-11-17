@@ -26,14 +26,12 @@ import java.util.logging.Logger;
 public class NewServlet extends HttpServlet {
     Customer cus;
     MonsumHttpClient client;
-  //  private static Logger myLogger = Logger.getLogger("web"); 
 
 
     @Override 
     public void init() throws ServletException {
         client=new MonsumHttpClient();
         cus=new Customer(client.getClient());
-      //  myLogger.setLevel(Level.ALL);
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
